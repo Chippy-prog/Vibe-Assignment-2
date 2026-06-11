@@ -1,0 +1,116 @@
+/* ============================================
+   HOME PAGE - FULL VIEWPORT, NO SCROLL
+   Background color matching Aer reference
+   ============================================ */
+
+body.home-page {
+  height: 100vh;
+  overflow: hidden;
+  background-color: #1c1c1c;  /* Warm dark charcoal — matches Aer reference */
+}
+
+.home-page .navbar {
+  border-bottom: none;
+  background-color: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #1c1c1c;  /* Exact Aer match */
+  position: relative;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
+  padding-top: var(--nav-height);
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.section-indicator {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.section-indicator .number {
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: #9a9a9a;  /* Slightly warmer gray */
+  letter-spacing: 0.05em;
+}
+
+.section-indicator .line {
+  width: 50px;
+  height: 1px;
+  background-color: #555555;
+}
+
+.hero-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #9a9a9a;
+  margin-bottom: 1.5rem;
+}
+
+.hero-title {
+  font-family: var(--font-heading);
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  font-weight: 400;
+  line-height: 1.05;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+
+.hero-desc {
+  font-size: 1.05rem;
+  color: #9a9a9a;
+  line-height: 1.8;
+  max-width: 480px;
+  margin-bottom: 2.5rem;
+}
+
+.hero-desc em {
+  color: #ffffff;
+  font-style: normal;
+  border-bottom: 1px solid #555555;
+}
+
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.hero-cta:hover {
+  background-color: #ffffff;
+  color: #1c1c1c;
+}
+
+@media screen and (max-width: 767px) {
+  .hero-title {
+    font-size: clamp(2.5rem, 10vw, 3.5rem);
+  }
+  
+  .hero-desc {
+    font-size: 1rem;
+  }
+}

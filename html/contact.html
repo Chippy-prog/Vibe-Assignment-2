@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | UGOCHUKWU</title>
+  <!-- Make sure these paths match your folder structure -->
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/contact.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+  <!-- ============================================
+       NAVIGATION
+       ============================================ -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">UGOCHUKWU</a>
+      
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skill.html">Skill</a></li>
+        <li><a href="project.html">Project</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ============================================
+       PAGE HEADER
+       ============================================ -->
+  <header class="page-header">
+    <div class="container">
+      <div class="section-indicator">
+        <span class="number">/ 05</span>
+        <span class="line"></span>
+      </div>
+      <h1 class="page-title">Get In Touch</h1>
+      <p class="page-desc">Have a question or want to collaborate? I would love to hear from you.</p>
+    </div>
+  </header>
+
+  <!-- ============================================
+       CONTACT SECTION
+       Two-column layout: info left, form right.
+       ============================================ -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-wrapper">
+        
+        <!-- LEFT: Contact Info -->
+        <div class="contact-info">
+          <h2>Let's Talk</h2>
+          <p>Whether you want to discuss a project, share advice, or just say hello, my inbox is always open.</p>
+          
+          <div class="info-list">
+            <div class="info-item">
+              <div class="info-icon">@</div>
+              <div class="info-text">
+                <span class="info-label">Email</span>
+                <a href="mailto:ugochukwuonu42@gmail.com">ugochukwuonu42@gmail.com</a>
+              </div>
+            </div>
+            
+            <div class="info-item">
+              <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="info-text">
+                <span class="info-label">Location</span>
+                <p>Lagos, Nigeria</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Social Links -->
+          <div class="social-row">
+            <a href="https://github.com/Chippy-prog" class="social-btn"><i class="fa-brands fa-github"></i></a>
+            <a href="https://x.com/DChippy59731" class="social-btn"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/ugochukwu-onu-b1600a334/" class="social-btn"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+        
+        <!-- RIGHT: Contact Form -->
+        <div class="form-box">
+          <h2>Send a Message</h2>
+          
+          <form action="#" method="POST">
+            <div class="form-row">
+              <div class="form-field">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required>
+              </div>
+              
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="your@email.com" required>
+              </div>
+            </div>
+            
+            <div class="form-field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="6" placeholder="Write your message here..." required></textarea>
+            </div>
+            
+            <button type="submit" class="btn-submit">Send Message</button>
+          </form>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">UGOCHUKWU</a>
+          <p>Beginner web developer exploring the digital landscape.</p>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skill.html">Skills</a></li>
+            <li><a href="project.html">Projects</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="contact.html">Get in Touch</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 UGOCHUKWU. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Menu Script -->
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+    
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+      });
+    });
+  </script>
+</body>
+</html>
